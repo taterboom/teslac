@@ -22,8 +22,6 @@ jobs:
 
     runs-on: ubuntu-latest
     
-    environment: xy_model3
-    
     env:
       TESLA_ACCESS_TOKEN: ${{ secrets.TESLA_ACCESS_TOKEN }}
       TESLA_REFRESH_TOKEN: ${{ secrets.TESLA_REFRESH_TOKEN }}
@@ -40,4 +38,5 @@ jobs:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
     - run: node -v
+    - run: echo ${{ github.event.inputs.environment }}
     - run: npm run teslac
