@@ -11,9 +11,16 @@ on:
   workflow_dispatch:
 
 jobs:
+  
   build:
 
     runs-on: ubuntu-latest
+    
+    environment: xy_model3
+    
+    env:
+      TESLA_ACCESS_TOKEN: ${{ secrets.TESLA_ACCESS_TOKEN }}
+      TESLA_REFRESH_TOKEN: ${{ secrets.TESLA_REFRESH_TOKEN }}
 
     strategy:
       matrix:
@@ -26,5 +33,4 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
-    - run: node -v
     - run: npm run teslac
