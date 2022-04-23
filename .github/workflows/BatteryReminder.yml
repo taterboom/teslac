@@ -22,7 +22,7 @@ jobs:
 
     runs-on: ubuntu-latest
     
-    environment: ${{ github.event.inputs.environment }}
+    environment: xy_model3
     
     env:
       TESLA_ACCESS_TOKEN: ${{ secrets.TESLA_ACCESS_TOKEN }}
