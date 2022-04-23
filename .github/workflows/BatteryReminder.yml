@@ -38,5 +38,5 @@ jobs:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
     - run: node -v
-    - run: echo ${{ github.event.inputs.environment }}
+    - run: echo ${{ inputs.environment }}
     - run: npm run teslac
