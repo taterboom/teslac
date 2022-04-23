@@ -9,18 +9,14 @@ on:
   pull_request:
     branches: [ main ]
   workflow_dispatch:
-    inputs:
-       environment:
-          description: 'Environment'
-          type: environment
-          default: 'xy_model3'
-          required: true 
 
 jobs:
   
   build:
 
     runs-on: ubuntu-latest
+    
+    environment: xy_model3
     
     env:
       TESLA_ACCESS_TOKEN: ${{ secrets.TESLA_ACCESS_TOKEN }}
@@ -37,6 +33,4 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
-    - run: node -v
-    - run: echo ${{ inputs.environment }}
     - run: npm run teslac
