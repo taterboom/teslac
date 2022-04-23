@@ -33,6 +33,7 @@ class TeslaClient {
   static ownerApi(path) {
     return TeslaClient.OWNER_API_PREFIX + path
   }
+  ownerApi = TeslaClient.ownerApi
 
   access_token
   refresh_token

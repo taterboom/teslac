@@ -1,8 +1,11 @@
 {
-  "name": "tesla-utils",
+  "name": "teslac",
   "version": "1.0.0",
   "description": "",
-  "main": "TeslaClient.js",
+  "main": "index.js",
+  "files": [
+    "*.js"
+  ],
   "scripts": {
     "teslac": "node ./bin.js"
   },
