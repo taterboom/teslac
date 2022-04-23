@@ -1,0 +1,12 @@
+{
+  "name": "tesla-utils",
+  "version": "1.0.0",
+  "description": "",
+  "main": "TeslaClient.js",
+  "scripts": {
+    "teslac": "node ./bin.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
