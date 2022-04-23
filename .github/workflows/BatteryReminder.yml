@@ -22,7 +22,11 @@ jobs:
 
     runs-on: ubuntu-latest
     
-    environment: xy_model3
+    environment: ${{ github.event.inputs.environment }}
+    
+    env:
+      TESLA_ACCESS_TOKEN: ${{ secrets.TESLA_ACCESS_TOKEN }}
+      TESLA_REFRESH_TOKEN: ${{ secrets.TESLA_REFRESH_TOKEN }}
 
     strategy:
       matrix:
