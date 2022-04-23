@@ -9,11 +9,20 @@ on:
   pull_request:
     branches: [ main ]
   workflow_dispatch:
+    inputs:
+       environment:
+          description: 'Environment to run tests against'
+          type: environment
+          default: xy_model3
+          required: true 
 
 jobs:
+  
   build:
 
     runs-on: ubuntu-latest
+    
+    environment: ${{ github.event.inputs.environment }}
 
     strategy:
       matrix:
