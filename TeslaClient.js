@@ -41,6 +41,9 @@ class TeslaClient {
   constructor(access_token, refresh_token) {
     this.access_token = access_token
     this.refresh_token = refresh_token
+    if (!refresh_token) {
+      throw new Error("need refresh_token!")
+    }
   }
 
   async _fetch(url, options = {}) {
