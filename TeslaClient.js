@@ -73,7 +73,7 @@ class TeslaClient {
 
   async control(id, url, options = {}, noOnlineCheck = false) {
     const localVehicleData = this.vehicles.find((item) => item.id === id)
-    if (localVehicleData?.state === "asleep") {
+    if (localVehicleData && localVehicleData.state === "asleep") {
       await this.wakeUp(id)
     }
     try {
