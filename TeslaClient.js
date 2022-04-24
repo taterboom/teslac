@@ -1,10 +1,4 @@
-function checkVersion() {
-  if (!fetch) {
-    console.error("need node version >18")
-  }
-}
-
-checkVersion()
+const fetch = require("node-fetch")
 
 async function retry(transactionGenerator, { times = 3, delay = 20000, msg = "" } = {}) {
   let i = 0
