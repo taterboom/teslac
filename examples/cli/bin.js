@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-var teslac = require("./index")
+var teslac = require("../../src/index")
 
 var access_token = process.argv[2] || process.env.TESLA_ACCESS_TOKEN
 
