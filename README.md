@@ -26,8 +26,8 @@ teslac(access_token, refresh_token)
 
 ## Examples
 
-- [cli](./examples/cli/README.md)
-- [tencent-serverless-function](./examples//tencent-serverless-function//README.md)
+- [cli](./examples/cli)
+- [tencent-serverless-function](./examples//tencent-serverless-function/)
 
 ## API
 
