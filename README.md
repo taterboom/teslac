@@ -9,7 +9,7 @@
 ## Uage
 
 ```javascript
-// get your tokens form mobile app "Auth for Tesla"(ios) or "Tesla Tokens"(android)
+// get your tokens from mobile app "Auth for Tesla"(ios) or "Tesla Tokens"(android)
 teslac(access_token, refresh_token)
   .then((tc) =>
     tc
