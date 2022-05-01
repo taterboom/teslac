@@ -47,6 +47,7 @@ class TeslaClient {
       headers: {
         ...options.headers,
         "Content-Type": "application/json",
+        "User-Agent": "",
       },
       body: options.body && JSON.stringify(options.body),
     })
